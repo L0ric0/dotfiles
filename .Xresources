@@ -1,0 +1,19 @@
+xterm.vt100.locale: true
+xterm.vt100.backarrowKey: false
+xterm.ttyModes: erase ^?
+xterm.vt100.saveLines: 1000000
+*foreground: green
+*background: black
+! disable bold font faces, instead make text light blue.
+xterm.vt100.colorBDMode: true
+xterm.vt100.colorBD: rgb:82/a4/d3
+! disable underlined text, instead make it white.
+! xterm.vt100.colorULMode: true
+! xterm.vt100.colorUL: rgb:e4/e4/e4
+! similarly use colorIT for italics
+xterm*ScrollKey: true
+xterm*fullscreen: never
+xterm*font:     *-monospace-*-*-*-*-8-*-*-*-*-iso10646-1
+xterm*faceName: DejaVu Sans Mono
+xterm*faceSize: 8.0
+xterm*renderFont: true

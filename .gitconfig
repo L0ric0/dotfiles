@@ -1,0 +1,13 @@
+[user]
+	email = lorenz@steinerts.de
+	name = Lorenz Steinert
+	signingKey = 93F0F2090BDE7BF500F0BA0E712AFA10EB8BD6C6
+[color]
+	ui = true
+[commit]
+	gpgSign = true
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
