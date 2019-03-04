@@ -43,7 +43,7 @@ Plugin 'janko-m/vim-test'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'neomake/neomake'
-Plugin 'puppetlabs/puppet-syntax-vim'
+Plugin 'rodjek/vim-puppet'
 
 " Markdown / Writting
 Plugin 'reedes/vim-pencil'
