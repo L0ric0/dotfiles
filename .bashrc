@@ -17,10 +17,16 @@ function path_remove {
 
 alias ls='ls --color=auto '
 alias diff='diff --color=auto '
+alias vim='nvim'
 
 # Set GPG TTY
 GPG_TTY=$(tty)
 export GPG_TTY
+
+HISTSIZE=-1
+export HISTSIZE
+HISTFILESIZE=-1
+export HISTFILESIZE
 
 HISTCONTROL=ignoreboth:erasedups
 export HISTCONTROL
@@ -54,7 +60,9 @@ if ! { [ "$TERM" = "screen-256color" ] && [ -n "$TMUX" ] ; } then
             select-layout main-vertical \; \
             new-window \; \
             send-keys 'ssh h2790514' C-m \; \
-            previous-window \; \
+            new-window \; \
+            send-keys 'weechat' C-m \; \
+            next-window \; \
             select-pane -t 0 \;;
     fi
 fi
