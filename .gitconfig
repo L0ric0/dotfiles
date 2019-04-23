@@ -1,7 +1,7 @@
 [user]
 	email = lorenz@steinerts.de
 	name = Lorenz Steinert
-	signingKey = 93F0F2090BDE7BF500F0BA0E712AFA10EB8BD6C6
+    signingKey = 2584CA75748BFAE9
 [color]
 	ui = true
 [commit]
