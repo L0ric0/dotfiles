@@ -18,10 +18,15 @@ function path_remove {
 alias ls='ls --color=auto '
 alias diff='diff --color=auto '
 alias vim='nvim'
+alias vimdiff='nvim -d'
 
 # Set GPG TTY
 GPG_TTY=$(tty)
 export GPG_TTY
+
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+    export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
 
 HISTSIZE=-1
 export HISTSIZE
@@ -35,15 +40,16 @@ export HISTCONTROL
 #gpg-connect-agent updatestartuptty /bye > /dev/null
 
 #Set ssh-agent sock and ssh-agent pid
-eval $(cat ~/.ssh/agent-bartimaeus) > /dev/null
+#eval $(cat ~/.ssh/agent-bartimaeus) > /dev/null
 
 path_remove /usr/bin/env
 
 shopt -s autocd cdspell dotglob extglob
 
 #aliases for acp and amv
-alias cp='acp -g'
-alias mv='amv -g'
+alias cp='acp -g '
+alias mv='amv -g '
+alias ssh='gpgconf --launch gpg-agent && ssh '
 
 
 if ! { [ "$TERM" = "screen-256color" ] && [ -n "$TMUX" ] ; } then
