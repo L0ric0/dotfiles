@@ -7,7 +7,9 @@
 [commit]
 	gpgSign = true
 [merge]
-	tool = vimdiff
+	tool = "nvim -d"
 	conflictstyle = diff3
 [mergetool]
 	prompt = false
+[core]
+	editor = nvim
